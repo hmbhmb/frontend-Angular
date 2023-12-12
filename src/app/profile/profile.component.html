@@ -1,0 +1,21 @@
+<mat-card class="prf text-center content container mt-4 p-5" *ngIf="token">
+    <mat-card>
+      <mat-label>Username :</mat-label> 
+      <input matInput disabled [value]="at.dataToken().username">
+    </mat-card>
+    
+    <mat-card>
+      <mat-label>Firstname :</mat-label> 
+      <input matInput disabled [value]="at.dataToken().fullname.split(' ')[0]">
+    </mat-card>
+    
+    <mat-card>
+      <mat-label>Lastname :</mat-label> 
+      <input matInput disabled [value]="at.dataToken().fullname.split(' ')[1]">
+    </mat-card>
+    
+    <mat-card>
+      <mat-label>E-mail :</mat-label> 
+      <input style="text-align:center;" matInput disabled [value]="at.dataToken().email">
+    </mat-card>
+</mat-card>

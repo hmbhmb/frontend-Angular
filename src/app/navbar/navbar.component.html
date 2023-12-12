@@ -1,0 +1,57 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+
+    <a class="navbar-brand" routerLink="">
+    <img src="https://static.vecteezy.com/system/resources/previews/027/486/212/large_2x/creative-minimal-style-professional-initial-letter-s-logo-design-template-on-black-background-vector.jpg" alt="" height="36">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+
+        <ng-container *ngIf="!at.isUser()">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}" routerLink="">Home</a>
+          </li>
+        </ng-container>
+
+        <ng-container *ngIf="!at.isUser()">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/login">Log In</a>
+          </li>
+        </ng-container>
+
+        <ng-container *ngIf="!at.isUser()">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/signup">Sign Up</a>
+          </li>
+        </ng-container>
+
+        <ng-container *ngIf="at.isUser()">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/success">Home</a>
+          </li>
+        </ng-container>
+
+        <ng-container *ngIf="at.isUser()">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/profile' , at.dataToken()._id]">Profile</a>
+          </li>
+        </ng-container>
+        
+        <ng-container *ngIf="at.isUser()">
+          <li class="nav-item">
+            <a (click)="logout()" class="nav-link" routerLink="">Log Out</a>
+          </li>
+        </ng-container>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

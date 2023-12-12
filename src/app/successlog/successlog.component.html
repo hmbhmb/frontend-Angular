@@ -1,0 +1,22 @@
+<div class="content container mt-4">
+    <div class="home text-center">
+        <h1>Hello, {{ at.dataToken().fullname }}</h1><br><br><br>
+    </div>
+    <div class="row">
+    <div class="col-sm-2" *ngFor="let prod of prods">
+        <div class="_card">
+
+            <div class="img-box">
+                <img [src]="prod.img" alt="">									
+            </div>
+
+            <div class="_card_content">
+                <h4>{{ prod.titel }}</h4>
+                <p class="Desciption">{{ prod.desciption }}</p>									
+                <p class="price"><b>{{ prod.price }}</b></p>
+                <a routerLink="/success" class="btn btn-primary">ADD TO CART</a>
+            </div>	
+        </div>
+    </div>
+</div>
+</div>
